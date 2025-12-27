@@ -25,7 +25,9 @@ export const app = new Elysia()
 			},
 			mapJsonSchema: {
 				zod: z.toJSONSchema
-			}
+			},
+			// Explicitly select Swagger UI as the OpenAPI UI provider
+			provider: 'swagger-ui',
 		})
 	)
 	.use(User)
